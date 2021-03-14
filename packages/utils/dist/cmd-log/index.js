@@ -2,6 +2,6 @@
 exports.__esModule = true;
 exports.log = void 0;
 function log() {
-    console.log("logaa");
+    console.log("logaaaas");
 }
 exports.log = log;

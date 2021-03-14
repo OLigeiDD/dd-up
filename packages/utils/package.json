@@ -17,7 +17,7 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.npm.taobao.org/"
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
@@ -32,5 +32,5 @@
   "bugs": {
     "url": "https://github.com/OLigeiDD/dd-up/issues"
   },
-  "gitHead": "85e48fe8d26a265f955aca6b00eb55ed1b77800e"
+  "gitHead": "9d639bec5811c6776c76c532ccf529f045032382"
 }

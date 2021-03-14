@@ -157,7 +157,7 @@
         "affectsGlobalScope": true
       },
       "./src/cmd-log/index.ts": {
-        "version": "1924bd1dcae8db3633cd3a17750f8eaf626d4ff7e512145f725219d03d43a8c3",
+        "version": "7050aec7958dc778dc7278a351617471c27feef47815bf5c6e3a9e5f9aa18bdc",
         "signature": "449333b4114cb75fd9514596ee39620ae7f7586d5e9ea85e9b0f39460139c9f2",
         "affectsGlobalScope": false
       },
