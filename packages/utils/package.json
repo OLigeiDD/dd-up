@@ -17,6 +17,7 @@
     "lib"
   ],
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "repository": {
@@ -32,5 +33,5 @@
   "bugs": {
     "url": "https://github.com/OLigeiDD/dd-up/issues"
   },
-  "gitHead": "ed0e63f4602ef7ecae6e359fd678f13a37b70a09"
+  "gitHead": "96e67f24df44d2e997d1b16f62d6b44c97eddf18"
 }
