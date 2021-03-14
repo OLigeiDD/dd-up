@@ -422,7 +422,7 @@
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true,
       "noImplicitThis": true,
-      "noUnusedLocals": true,
+      "noUnusedLocals": false,
       "stripInternal": true,
       "noImplicitReturns": false,
       "strict": false,
@@ -431,7 +431,6 @@
       "rootDir": "./src",
       "outDir": "./dist",
       "composite": true,
-      "watch": true,
       "configFilePath": "./tsconfig.json"
     },
     "referencedMap": {
