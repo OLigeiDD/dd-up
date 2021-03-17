@@ -1,9 +1,9 @@
 {
-  "name": "@dd-up/utils",
+  "name": "@dd-up/cli-cmd-init",
   "version": "0.0.7",
-  "description": "> TODO: description",
+  "description": "初始化项目",
   "keywords": [
-    "utils"
+    "init"
   ],
   "author": "ydd <792196835@qq.com>",
   "homepage": "https://github.com/OLigeiDD/dd-up#readme",
@@ -17,12 +17,11 @@
     "lib"
   ],
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npm.taobao.org/"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/OLigeiDD/dd-up.git"
+    "url": "git+https://github.com/OLigeiDD/dd-up.git"
   },
   "scripts": {
     "dev": "npm run clean && tsc --build --watch",
@@ -32,12 +31,5 @@
   },
   "bugs": {
     "url": "https://github.com/OLigeiDD/dd-up/issues"
-  },
-  "gitHead": "96e67f24df44d2e997d1b16f62d6b44c97eddf18",
-  "dependencies": {
-    "npmlog": "^4.1.2"
-  },
-  "devDependencies": {
-    "@types/npmlog": "^4.1.2"
   }
 }
