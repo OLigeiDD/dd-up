@@ -54,32 +54,35 @@ __exportStar(require("./utils"), exports);
 var CLI = /** @class */ (function () {
     function CLI() {
         this.cwd = process.cwd();
+        this.debug = utils_1.log.verbose;
         this.commands = commands_1.commanderList;
     }
     CLI.prototype.registerCommander = function () {
         return __awaiter(this, void 0, void 0, function () {
             var pkg, argv;
+            var _this = this;
             return __generator(this, function (_a) {
-                pkg = require("../package.json");
+                pkg = require('../package.json');
                 argv = process.argv;
                 commander_1.program
-                    .name("d")
-                    .usage("<command> [options]")
-                    .version(pkg.version, "-v, --version", "查看当前版本")
-                    .option("-d, --debug", "是否开启调试", false);
-                commander_1.program.on("option:debug", function () {
-                    utils_1.changeLogLevel("verbose");
-                });
-                commander_1.program.on("command:*", function (cmd) {
-                    utils_1.log.error("", "\u672A\u77E5\u7684\u547D\u4EE4 " + cmd);
-                });
+                    .name('d')
+                    .usage('<command> [options]')
+                    .version(pkg.version, '-v, --version', '查看当前版本')
+                    .option('-d, --debug', '是否开启调试', false);
                 this.commands.forEach(function (cmd) {
-                    var pg = commander_1.program.command(cmd.command + " " + (cmd.argv ? "[" + cmd.argv + "]" : ""));
+                    var pg = commander_1.program.command(cmd.command + " " + (cmd.argv ? "[" + cmd.argv + "]" : ''));
                     cmd.options.forEach(function (opt) {
                         pg.option("-" + opt.alias + ",--" + opt.name, opt.des);
                     });
                     pg.description(cmd.description);
                     pg.action(require(cmd.actionModule)["default"]);
+                });
+                commander_1.program.on('option:debug', function () {
+                    utils_1.changeLogLevel('verbose');
+                    _this.debug('', 'debug');
+                });
+                commander_1.program.on('command:*', function (cmd) {
+                    utils_1.log.error('', "\u672A\u77E5\u7684\u547D\u4EE4 " + cmd);
                 });
                 // program
                 //   .command("init [name]")

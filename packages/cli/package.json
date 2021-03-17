@@ -48,5 +48,5 @@
     "@types/node": "^14.14.34",
     "@types/semver": "^7.3.4"
   },
-  "gitHead": "96e67f24df44d2e997d1b16f62d6b44c97eddf18"
+  "gitHead": "5cfb9562fb1f594b56cd87343514c2534db54419"
 }
