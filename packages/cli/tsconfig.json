@@ -4,12 +4,16 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
-    "composite": true
+    "composite": true,
+    "resolveJsonModule": true
   },
   "include": ["./src/**/*.ts"],
   "references": [
     {
       "path": "../utils/tsconfig.json"
+    },
+    {
+      "path": "../cli-cmd-init/tsconfig.json"
     }
   ]
 }

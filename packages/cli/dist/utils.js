@@ -5,24 +5,39 @@ var path_1 = require("path");
 var os_1 = require("os");
 var fs_1 = require("fs");
 var child_process_1 = require("child_process");
+var semver = require("semver");
 function checkUpdate() {
     var startTime = Date.now();
     var lockFile = path_1.join(os_1.tmpdir(), "ddupupdate.lock");
     if (fs_1.existsSync(lockFile)) {
         var content = +fs_1.readFileSync(lockFile).toString();
         if (startTime - content < 24 * 3600000) {
-            // return;
+            return;
         }
     }
     fs_1.writeFileSync(lockFile, "" + startTime);
     try {
-        var data = child_process_1.execSync("npm view @ddup/cli dist-tags --json", {
+        var data = child_process_1.execSync("npm view @dd-up/cli dist-tags --json", {
             cwd: process.env.HOME
         }).toString();
-        console.log(JSON.parse(data)["latest"]);
+        var remoteLatestVersion = JSON.parse(data)["latest"];
+        var currentVersion = require("../package.json").version;
+        console.log(remoteLatestVersion, currentVersion);
+        if (semver.gt(remoteLatestVersion, currentVersion)) {
+            console.log();
+            console.log("*********************************************************");
+            console.log();
+            console.log("   发现新版本:");
+            console.log("   " + currentVersion + " ==> " + remoteLatestVersion);
+            console.log("   安装:");
+            console.log("   npm i @dd-up/cli -g");
+            console.log();
+            console.log("*********************************************************");
+            console.log();
+        }
     }
     catch (err) {
-        console.log("更新失败", err);
+        console.log("版本检查失败", err);
     }
 }
 exports.checkUpdate = checkUpdate;

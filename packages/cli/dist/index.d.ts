@@ -1,5 +1,11 @@
+import { CammanderOption } from "./commands";
 export * from "./utils";
 export declare class CLI {
-    constructor(argv: any);
-    start(): void;
+    core: any;
+    commands: CammanderOption[];
+    argv: any;
+    cwd: string;
+    constructor();
+    registerCommander(): Promise<void>;
+    start(): Promise<void>;
 }

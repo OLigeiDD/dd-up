@@ -9,7 +9,7 @@
   "homepage": "https://github.com/OLigeiDD/dd-up#readme",
   "license": "ISC",
   "bin": {
-    "ddup": "bin/index.js"
+    "d": "bin/index.js"
   },
   "main": "dist/index.js",
   "directories": {
@@ -37,11 +37,16 @@
     "url": "https://github.com/OLigeiDD/dd-up/issues"
   },
   "dependencies": {
+    "@dd-up/cli-cmd-init": "^0.0.7",
+    "@dd-up/utils": "^0.0.7",
+    "commander": "^7.1.0",
     "import-local": "^3.0.2",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "semver": "^7.3.4"
   },
   "devDependencies": {
-    "@types/node": "^14.14.34"
+    "@types/node": "^14.14.34",
+    "@types/semver": "^7.3.4"
   },
   "gitHead": "96e67f24df44d2e997d1b16f62d6b44c97eddf18"
 }
