@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-const cli = require('cli');
+const cli = require('cli ');
 
 // TODO: DEMONSTRATE API
 ```
