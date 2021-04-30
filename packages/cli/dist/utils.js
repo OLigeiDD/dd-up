@@ -10,6 +10,7 @@ function checkUpdate() {
     var startTime = Date.now();
     var lockFile = path_1.join(os_1.tmpdir(), 'ddupupdate.lock');
     if (fs_1.existsSync(lockFile)) {
+        // 每天只检查一边更新
         var content = +fs_1.readFileSync(lockFile).toString();
         if (startTime - content < 24 * 3600000) {
             return;
@@ -21,13 +22,13 @@ function checkUpdate() {
             cwd: process.env.HOME
         }).toString();
         var remoteLatestVersion = JSON.parse(data)['latest'];
-        var currentVersion = require('../package.json').version;
-        if (semver.gt(remoteLatestVersion, currentVersion)) {
+        var localVersion = require('../package.json').version;
+        if (semver.gt(remoteLatestVersion, localVersion)) {
             console.log();
             console.log('*********************************************************');
             console.log();
             console.log('   发现新版本:');
-            console.log("   " + currentVersion + " ==> " + remoteLatestVersion);
+            console.log("   " + localVersion + " ==> " + remoteLatestVersion);
             console.log('   安装:');
             console.log('   npm i @dd-up/cli -g');
             console.log();

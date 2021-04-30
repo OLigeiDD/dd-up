@@ -8,5 +8,6 @@ export declare class CLI {
     debug: (prefix: string, message: string, ...args: any[]) => void;
     constructor();
     registerCommander(): Promise<void>;
+    addCommander(): Promise<void>;
     start(): Promise<void>;
 }

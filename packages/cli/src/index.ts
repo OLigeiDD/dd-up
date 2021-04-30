@@ -85,6 +85,8 @@ export class CLI {
     }
   }
 
+  async addCommander() {}
+
   async start() {
     await this.registerCommander();
   }

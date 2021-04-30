@@ -9,7 +9,7 @@
   "homepage": "https://github.com/OLigeiDD/dd-up#readme",
   "license": "ISC",
   "bin": {
-    "d": "bin/index.js"
+    "d": "bin/d.js"
   },
   "main": "dist/index.js",
   "directories": {

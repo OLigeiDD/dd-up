@@ -3,6 +3,7 @@
 const { CLI, checkUpdate } = require('../dist');
 const minimist = require('minimist');
 const argv = minimist(process.argv.slice(2));
+console.log(argv);
 // 启动CLI前 检查更新
 checkUpdate();
 const cli = new CLI();

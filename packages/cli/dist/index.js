@@ -128,6 +128,11 @@ var CLI = /** @class */ (function () {
             });
         });
     };
+    CLI.prototype.addCommander = function () {
+        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
+            return [2 /*return*/];
+        }); });
+    };
     CLI.prototype.start = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
