@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.17](https://github.com/OLigeiDD/dd-up/compare/v0.0.11...v0.0.17) (2021-04-30)
+
+**Note:** Version bump only for package @dd-up/utils
+
+
+
+
+
 ## [0.0.16](https://github.com/OLigeiDD/dd-up/compare/v0.0.11...v0.0.16) (2021-04-30)
 
 **Note:** Version bump only for package @dd-up/utils
