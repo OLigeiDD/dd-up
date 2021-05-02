@@ -1,6 +1,6 @@
 {
   "name": "@dd-up/cli-cmd-init",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "初始化项目",
   "keywords": [
     "init"

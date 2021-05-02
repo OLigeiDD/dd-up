@@ -1,6 +1,6 @@
 {
   "name": "@dd-up/cli",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "cli",
   "keywords": [
     "dd-up"
@@ -38,8 +38,8 @@
     "url": "https://github.com/OLigeiDD/dd-up/issues"
   },
   "dependencies": {
-    "@dd-up/cli-cmd-init": "^0.0.19",
-    "@dd-up/utils": "^0.0.19",
+    "@dd-up/cli-cmd-init": "^0.0.20",
+    "@dd-up/utils": "^0.0.20",
     "commander": "^7.1.0",
     "import-local": "^3.0.2",
     "minimist": "^1.2.5",
