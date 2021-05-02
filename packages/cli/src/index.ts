@@ -1,4 +1,4 @@
-import { program, Command } from 'commander';
+import { program } from 'commander';
 import { commanderList, CammanderOption } from './commands';
 import { changeLogLevel, log } from '@dd-up/utils';
 export * from './utils';
