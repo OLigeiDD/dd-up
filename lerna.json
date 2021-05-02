@@ -1,13 +1,19 @@
 {
-  "packages": ["packages/*"],
+  "packages": [
+    "packages/*"
+  ],
   "command": {
     "bootstrap": {
       "hoist": true,
       "noCi": true,
-      "npmClientArgs": ["--no-package-lock"]
+      "npmClientArgs": [
+        "--no-package-lock"
+      ]
     },
     "publish": {
-      "ignoreChanges": ["*.md"],
+      "ignoreChanges": [
+        "*.md"
+      ],
       "verifyAccess": false,
       "registry": "https://registry.npmjs.org/"
     },
@@ -16,5 +22,5 @@
     }
   },
   "npmClient": "npm",
-  "version": "0.0.20"
+  "version": "0.0.21"
 }
