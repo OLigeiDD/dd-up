@@ -5,16 +5,16 @@ import { execSync } from 'child_process';
 import * as semver from 'semver';
 
 export function checkUpdate() {
-  const startTime = Date.now();
-  const lockFile = join(tmpdir(), 'ddupupdate.lock');
-  if (existsSync(lockFile)) {
-    // 每天只检查一边更新ss
-    const content = +readFileSync(lockFile).toString();
-    if (startTime - content < 24 * 3600000) {
-      return;
-    }
-  }
-  writeFileSync(lockFile, `${startTime}`);
+  // const startTime = Date.now();
+  // const lockFile = join(tmpdir(), 'ddupupdate.lock');
+  // if (existsSync(lockFile)) {
+  //   // 每天只检查一边更新ss
+  //   const content = +readFileSync(lockFile).toString();
+  //   if (startTime - content < 24 * 3600000) {
+  //     return;
+  //   }
+  // }
+  // writeFileSync(lockFile, `${startTime}`);
   try {
     const data = execSync(`npm view @dd-up/cli dist-tags --json`, {
       cwd: process.env.HOME,
