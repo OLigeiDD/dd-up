@@ -10,7 +10,7 @@ function checkUpdate() {
     var startTime = Date.now();
     var lockFile = path_1.join(os_1.tmpdir(), 'ddupupdate.lock');
     if (fs_1.existsSync(lockFile)) {
-        // 每天只检查一边更新
+        // 每天只检查一边更新ss
         var content = +fs_1.readFileSync(lockFile).toString();
         if (startTime - content < 24 * 3600000) {
             return;
